@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
 
 const PORTRAIT = '/images/Filtered1.JPG'
 const HERO_BG =
-  'https://images.pexels.com/photos/8092461/pexels-photo-8092461.jpeg?auto=compress&cs=tinysrgb&w=1600'
+  '/images/Hero background 1.jpg'
 
 const stats = [
   { value: '20', label: 'Years in practice' },
