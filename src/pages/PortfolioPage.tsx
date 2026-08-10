@@ -316,9 +316,11 @@ export default function PortfolioPage() {
                 >
                   <option value="" disabled>Select one…</option>
                   <option>Product design</option>
-                  <option>Design system</option>
-                  <option>Front-end build</option>
-                  <option>Brand & art direction</option>
+                  <option>System Integration</option>
+                  <option>Full Stack Development</option>
+                  <option>Business Intelligence</option>
+                  <option>Security & Compliance</option>
+                  <option>AI Integration</option>
                   <option>Something else</option>
                 </select>
               </div>

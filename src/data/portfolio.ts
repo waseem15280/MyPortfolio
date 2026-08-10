@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
     id: 'p1',
     title: 'Open Test Solutions',
     category: 'Payment Systems · Integration and Certification',
-    year: '2025',
+    year: '',
     blurb:
       'FIS® Open Test Solutions (OTS) provide virtualized, SaaS-based automated testing, validation, and certification for electronic payment transactions, card networks, ATMs, and payment hubs. It allows financial institutions to simulate payment schemes and run certification test scripts remotely',
     image: '/images/OTS_pic.png',
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     id: 'p2',
     title: 'Card Management System',
     category: 'Web · Card Issuance · Card Processing',
-    year: '2015',
+    year: '',
     blurb:
       'A complete card management system for close loop prepaid cards from issuance to processing – Inventory, Activation, Recharge and Transaction processing',
     image: '/images/CMS.png',
@@ -34,47 +34,47 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'p3',
-    title: 'Marlowe & Co.',
-    category: 'E-commerce · Brand & Web',
-    year: '2024',
+    title: 'Enterprise WorkForce Management Software',
+    category: 'ERP · Retail',
+    year: '',
     blurb:
-      'A boutique fashion storefront with an editorial soul — art-directed product pages and a checkout that feels like a personal stylist.',
-    image: 'https://images.pexels.com/photos/7620619/pexels-photo-7620619.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['E-commerce', 'Art Direction', 'Shopify', 'Brand'],
-    link: 'https://example.com/marlowe-co',
+      'A comprehensive workforce management system for retail operations — streamlining scheduling, time tracking, and performance analytics.',
+    image: '/images/PDI-Workforce-Top-Image.jpg',
+    tags: ['SaaS', 'C#.net', 'Asp.net', 'Multitenancy'],
+    link: 'https://pditechnologies.com/increase-productivity/erp-back-office/enterprise-retail-software/pdi-enterprise-workforce/',
   },
   {
     id: 'p4',
-    title: 'Spectra Identity',
-    category: 'Branding · Visual System',
-    year: '2023',
+    title: 'ISO 8583 Transaction Switch Monitoring Dashboard',
+    category: 'Gift Card Processing · Switching',
+    year: '',
     blurb:
-      'A fluid visual identity for an independent music label — a generative gradient system that shifts with every release.',
-    image: 'https://images.pexels.com/photos/12564253/pexels-photo-12564253.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Branding', 'Generative', 'Type', 'Motion'],
-    link: 'https://example.com/spectra-identity',
+      'A real-time monitoring system for ISO 8583 transaction switches, providing insights into transaction flows and system performance.',
+    image: '/images/Gift Cards.png',
+    tags: ['Real-time', 'Transaction Analytics', 'SSRS', 'SSAS'],
+    link: 'https://blackhawknetwork.com/solutions/gift-cards-egifts/product-overview',
   },
   {
     id: 'p5',
-    title: 'Loft Creative Suite',
-    category: 'SaaS · Product Design',
-    year: '2023',
+    title: 'ATM Testlab',
+    category: 'Test Framework · Product Enhancement',
+    year: '',
     blurb:
-      'A collaborative design tool for independent studios — canvas, comments, and version history that never gets in the way.',
-    image: 'https://images.pexels.com/photos/131187/pexels-photo-131187.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['SaaS', 'Collaboration', 'Canvas', 'UX'],
-    link: 'https://example.com/loft-creative-suite',
+      'A comprehensive testing environment for ATM functionality, components and software, enabling teams to simulate various scenarios and validate performance.',
+    image: '/images/ATM Testlab.png',
+    tags: ['Virtual Simulation', 'ATM as a Service', 'UX'],
+    link: 'https://www.fisglobal.com/products/fis-payments-one-debit-suite/fis-atm-processing',
   },
   {
     id: 'p6',
-    title: 'Pulse Market Monitor',
+    title: 'CAPEX',
     category: 'Web · Dashboard',
-    year: '2022',
+    year: '',
     blurb:
-      'A market intelligence platform distilling thousands of signals into a single, honest pulse — designed for analysts who hate noise.',
-    image: 'https://images.pexels.com/photos/38808473/pexels-photo-38808473.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    tags: ['Dashboard', 'Data Viz', 'React', 'Design System'],
-    link: 'https://example.com/pulse-market-monitor',
+      'An automation solution to ensure all purchases are aligned with the budget sanctioned.',
+    image: '/images/pngtree.png',
+    tags: ['Dashboard', 'Workflow Automation', 'BPM'],
+    link: 'https://comm-it.in/case-studies/capex-based-purchase-approval-process-automation/',
   },
 ]
 
@@ -86,15 +86,15 @@ export interface SkillGroup {
 export const SKILLS: SkillGroup[] = [
   {
     title: 'Design',
-    items: ['Product Design', 'Design Systems', 'Interaction & Motion', 'Prototyping', 'Art Direction', 'Accessibility'],
+    items: ['JIRA', 'Storytelling|Sprint', 'diagrams.net', 'Figma', 'Bolt', 'Power BI'],
   },
   {
     title: 'Engineering',
-    items: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Node.js', 'Figma API'],
+    items: ['React|Angular|TypeScript', 'RESTful APIs', 'C#|.net|Core', 'Dapper', 'Azure', 'MS SQL Server|PostgreSQL'],
   },
   {
     title: 'Tooling',
-    items: ['Figma', 'Linear', 'Storybook', 'Vite', 'Git', 'Lottie'],
+    items: ['Jenkins', 'WIX', 'n8n', 'Git|svn', 'CheckMarx SAST+SCA'],
   },
 ]
 
@@ -108,36 +108,76 @@ export interface ExperienceItem {
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    role: 'Principal Product Designer',
-    company: 'Northwind Studio',
-    period: '2023 — Present',
-    location: 'Stockholm, SE',
+    role: 'Software Architect',
+    company: 'Self-employed | Consultant for Altimind Services LLP',
+    period: 'Jun,2026 — Present',
+    location: 'New Delhi, IN',
     summary:
-      'Lead designer for a multi-product design system used across six apps. Partnered with engineering to ship a token-driven component library adopted by 40+ designers.',
+      'Supervising development of SaaS based products for ERP and AI integration engagements.',
   },
   {
-    role: 'Senior Product Designer',
-    company: 'Fjord',
-    period: '2021 — 2023',
-    location: 'Copenhagen, DK',
+    role: 'Senior Software Architect',
+    company: 'FIS Global Business Solutions',
+    period: 'Jan,2026 — Jun,2026',
+    location: 'Noida, IN',
     summary:
-      'Owned end-to-end design for the flagship mobile banking app, lifting activation by 28% and earning a Red Dot nomination for the onboarding flow.',
+      'Security compliance engagements and POC for secret management using IBM HashiCorp Vault.',
   },
   {
-    role: 'Product Designer',
-    company: 'Marlowe & Co.',
-    period: '2019 — 2021',
-    location: 'London, UK',
+    role: 'IT Architect',
+    company: 'FIS Global Business Solutions',
+    period: '2018 — Jan,2026',
+    location: 'Noida, IN',
     summary:
-      'Designed and built the e-commerce storefront and brand system for a fashion startup, taking it from concept to a profitable first-year launch.',
+      'Developed Open Test Solutions(OTS). Certification management portal and knowledgeBase repository subsystems for OTS.',
   },
   {
-    role: 'Front-End Developer',
-    company: 'Loft Labs',
-    period: '2017 — 2019',
-    location: 'Berlin, DE',
+    role: 'Programmer Analyst, Senior',
+    company: 'FIS Global Business Solutions',
+    period: '2015 — 2018',
+    location: 'Noida, IN',
     summary:
-      'Built the first version of a collaborative creative tool in React and TypeScript, establishing the code patterns the team still uses today.',
+      'Contributed to the development of open test framework. ATM Test Lab and other projects for automated testing of banking applications.',
+  },
+  {
+    role: 'Associate Architect',
+    company: 'FIS Global Business Solutions',
+    period: '2013 — 2015',
+    location: 'Noida, IN',
+    summary:
+      'Card management system integration with POS and Acquiring Switch. Several projects for Loyalty and Gift Card processing.',
+  },
+  {
+    role: 'Principal Exe - Engineering',
+    company: 'FIS Global Business Solutions',
+    period: '2010 — 2013',
+    location: 'Noida, IN',
+    summary:
+      'Prepaid Card management system built for ISTS Worldwide Inc.',
+  },
+  {
+    role: 'Technical Lead',
+    company: 'FIS Global Business Solutions',
+    period: '2008 — 2010',
+    location: 'Noida, IN',
+    summary:
+      'Lead a team of 10 engineers to deliver PDI Workforce for PDI.',
+  },
+  {
+    role: 'Senior Software Engineer',
+    company: 'FIS Global Business Solutions',
+    period: '2007 — 2008',
+    location: 'Noida, IN',
+    summary:
+      'Designed and built monitoring components for ISO 8583 switch. Inhouse projects integrated with SharePoint Portal Server 2007. Reporting and analytics using SSRS and SSAS.',
+  },
+  {
+    role: 'Software Developer',
+    company: 'COMM IT India Pvt Ltd.',
+    period: '2005 — 2007',
+    location: 'New Delhi, IN',
+    summary:
+      'Delivered Capex. Responsible for building POCs on latest Microsoft technologies for Microsoft business partners. Delivered projects for MTNL, PFC, PepsiCo India.',
   },
 ]
 
@@ -145,21 +185,31 @@ export const SERVICES: { title: string; description: string }[] = [
   {
     title: 'Product Design',
     description:
-      'End-to-end product thinking — from messy first sketches to a polished, shipped interface your users actually love.',
+      'End-to-end product thinking — from messy first sketches to a polished, value added interface shipped at your premise or over cloud.',
   },
   {
-    title: 'Design Systems',
+    title: 'System Integration',
     description:
-      'Token-driven, accessible component libraries that scale across teams without losing their soul.',
+      'Token-driven, accessible libraries that scales out as you grow without losing their soul.',
   },
   {
-    title: 'Front-End Engineering',
+    title: 'Full Stack Engineering',
     description:
-      'Production React + TypeScript code that matches the design down to the pixel, with motion that feels intentional.',
+      'Production (React || Angular && TypeScript) code that matches the design down to the core, with motional CI/CD pipelines.',
   },
   {
-    title: 'Brand & Art Direction',
+    title: 'Business Intelligence',
     description:
-      'Visual identities and art direction that give digital products a distinctive, memorable voice.',
+      'Data-driven insights and analytics that inform strategic decisions and drive business growth.',
+  },
+  {
+    title: 'Security & Compliance',
+    description:
+      'Ensuring your digital products meet the highest standards of security and OWASP \u219110 compliance.',
+  },
+  {
+    title: 'AI Integration',
+    description:
+      'Integrating AI capabilities into your products or development processes to enhance user experience and drive innovation.',
   },
 ]
