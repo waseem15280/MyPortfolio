@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState, type SubmitEvent } from 'react'
 import {
   ArrowUpRight,
   ArrowDown,
@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { PROJECTS, SKILLS, EXPERIENCE, SERVICES } from '@/data/portfolio'
 import { cn } from '@/lib/utils'
+import emailjs from '@emailjs/browser'
 
 const PORTRAIT = '/images/Filtered1.JPG'
 const HERO_BG =
@@ -25,6 +26,25 @@ const marqueeWords = ['Full Stack Dev', 'Payment Systems', 'SaaS', 'Multitenancy
 
 export default function PortfolioPage() {
   const [sent, setSent] = useState(false)
+  const form = useRef<HTMLFormElement | null>(null)
+
+  const sendEmail = async (ev: any) => {
+    ev.preventDefault()
+
+    if (!form.current) return
+
+    try {
+      await emailjs.sendForm('service_nrejpin', 'template_odj8lqu', form.current, {
+        publicKey: 'hd7mw-7RleL8Ajd8l',
+      })
+
+      form.current.reset()
+      setSent(true)
+    } catch (error) {
+      console.error(error)
+      alert('Failed to send message. Please try again.')
+    }
+  }
 
   return (
     <main className="overflow-hidden">
@@ -271,6 +291,7 @@ export default function PortfolioPage() {
         </div>
 
         <div className="mx-auto mt-12 max-w-xl">
+          
           {sent ? (
             <div className="rounded-2xl border border-ink-100 bg-white p-10 text-center shadow-sm">
               <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-cream">
@@ -282,17 +303,18 @@ export default function PortfolioPage() {
               </p>
             </div>
           ) : (
-            <form
+            <form ref={form}
               onSubmit={(ev) => {
                 ev.preventDefault()
-                setSent(true)
+                sendEmail(ev)
+                //setSent(true)
               }}
               className="space-y-4 rounded-2xl border border-ink-100 bg-white p-6 shadow-sm sm:p-8"
             >
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="text-left">
                   <label className="mb-1.5 block text-sm font-medium text-ink-700">Name</label>
-                  <input
+                  <input name="name"
                     required
                     placeholder="Your name"
                     className="h-11 w-full rounded-lg border border-input bg-cream/40 px-3.5 text-sm text-ink-900 outline-none transition-colors placeholder:text-ink-400 focus-visible:border-ink-900 focus-visible:ring-2 focus-visible:ring-ink-900/20"
@@ -301,6 +323,7 @@ export default function PortfolioPage() {
                 <div className="text-left">
                   <label className="mb-1.5 block text-sm font-medium text-ink-700">Email</label>
                   <input
+                    name="email"
                     required
                     type="email"
                     placeholder="you@company.com"
@@ -310,7 +333,7 @@ export default function PortfolioPage() {
               </div>
               <div className="text-left">
                 <label className="mb-1.5 block text-sm font-medium text-ink-700">Project type</label>
-                <select
+                <select name="projectType"
                   className="h-11 w-full rounded-lg border border-input bg-cream/40 px-3.5 text-sm text-ink-900 outline-none transition-colors focus-visible:border-ink-900 focus-visible:ring-2 focus-visible:ring-ink-900/20"
                   defaultValue=""
                 >
@@ -327,6 +350,7 @@ export default function PortfolioPage() {
               <div className="text-left">
                 <label className="mb-1.5 block text-sm font-medium text-ink-700">Tell me about it</label>
                 <textarea
+                  name="message"
                   required
                   rows={4}
                   placeholder="What are you building, and what do you need help with?"
