@@ -109,7 +109,7 @@ export interface ExperienceItem {
 export const EXPERIENCE: ExperienceItem[] = [
   {
     role: 'Software Architect',
-    company: 'Self-employed | Consultant for Altimind Services LLP',
+    company: 'Altimind Services LLP',
     period: 'Jun,2026 — Present',
     location: 'New Delhi, IN',
     summary:
