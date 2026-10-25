@@ -60,7 +60,7 @@ export default function PortfolioPage() {
             I develop custom software products — and integrate them too.
           </h1>
           <p className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-ink-600">
-            Waseem Ahmad, an independent software architect in New Delhi. With over 20 years of experience in software engineering and enterprise product development, I help teams
+            Waseem Ahmad, a software architect in New Delhi. With over 20 years of experience in software engineering and enterprise product development, I help teams
             turn complex problems into solutions that bridge the gap between business and technology.
           </p>
           <div className="animate-fade-up mt-9 flex flex-wrap items-center gap-3">
